@@ -30,10 +30,10 @@ This repository outlines the steps to train a Tacotron2 model using a set of 50 
 
 ### 8. Test the Model
 - Once the model has been trained, test the model by generating speech from text.
-
 ## References
 
-1. YouTube: [<link>](https://www.youtube.com/watch?v=e71H--vxRvo&t=352s)
-2. GitHub Repo: [<link>](https://github.com/justinjohn0306/FakeYou-Tacotron2-Notebook?tab=readme-ov-file)
+1. YouTube: [Watch Video](https://www.youtube.com/watch?v=e71H--vxRvo&t=352s)
+2. GitHub Repo: [View Repository](https://github.com/justinjohn0306/FakeYou-Tacotron2-Notebook?tab=readme-ov-file)
+
 
 
