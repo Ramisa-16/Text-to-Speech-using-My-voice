@@ -1,46 +1,86 @@
-# Text-to-Speech-using-My-voice
+<h1 align="center">🎤 Text-to-Speech Using My Voice</h1>
 
-# Tacotron2 Text-to-Speech Model Training
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Voice-Cloning-00b39e?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/TTS-Custom%20Voice-412991?style=for-the-badge"/>
+</p>
 
-This repository outlines the steps to train a Tacotron2 model using a set of 50 audio files. The following steps will guide you through the process of converting, renaming, transcribing, preprocessing, training, and testing the model.
+<p align="center">
+  A personal voice cloning project — training a TTS model on custom voice recordings
+  to synthesize speech that sounds like the speaker's own voice.
+</p>
 
-## Steps
+---
 
-### 1. Record 50 Audio Files
-- Record 50 audio files and store them in `.m4a` format.
+## 🎯 What It Does
 
-### 2. Convert Files from M4A to WAV
-- Convert the recorded `.m4a` files to `.wav` format.
+Records → trains → synthesizes. Given a few minutes of your own voice recordings, the model learns your vocal characteristics and can generate new speech in your voice from any text input.
 
-### 3. Rename the Files from 1-50
-- Rename the converted `.wav` files from `audio_1.wav` to `1.wav`, `audio_2.wav` to `2.wav`, and so on.
-- You can use the following Google Colab notebook for renaming:
-  [Rename Files (Colab Notebook)](https://colab.research.google.com/drive/1jwK5iqtUQ0Wlq8yGD9k62ZulWuLtpmSB?usp=sharing)
+---
 
-### 4. Create Metadata (Transcripted Data)
-- Use Hugging Face's `facebook/wav2vec2-large-960h` model to transcribe the audio files and generate metadata.
-- You can use this Colab notebook to create the metadata:
-  [Generate Metadata (Colab Notebook)](https://colab.research.google.com/drive/15ceZiLD4JslNY2Kln3Y0OYtW8yssh7I7?usp=sharing)
+## 🏗️ Pipeline
 
-### 5. Preprocess WAV Files
-- Normalize and preprocess the `.wav` files to get them ready for training.
-- Use this Colab notebook for preprocessing:
-  [Preprocess WAV Files (Colab Notebook)](https://colab.research.google.com/drive/13glFhBLVzjhKi2ekNfJ8gvcfkM_aKBvt?usp=sharing)
+```
+Personal Voice Recordings (WAV/MP3)
+        │
+        ▼
+Audio Preprocessing
+(normalization, silence trimming, alignment)
+        │
+        ▼
+Speaker Encoder
+(extract voice embedding from recordings)
+        │
+        ▼
+TTS Model Training
+(fine-tune on personal voice data)
+        │
+        ▼
+Text Input → Mel-Spectrogram → Vocoder
+        │
+        ▼
+🔊 Synthesized speech in your voice
+```
 
-### 6. Title Metadata for Tracking
-- Ensure that the metadata file is properly structured with the file names and their corresponding transcriptions.
-- You can use this Colab notebook to title the metadata for tracking:
-  [Title Metadata (Colab Notebook)](https://colab.research.google.com/drive/1D1jLP0GnNE3DEbtnWeRDJaBzlB14qEHm?usp=sharing)
+---
 
-### 7. Train Tacotron2 Model
-- Train the Tacotron2 model using the preprocessed `.wav` files and metadata.
+## ✨ Features
 
-### 8. Test the Model
-- Once the model has been trained, test the model by generating speech from text.
-## References
+- **Personal voice cloning** — train on your own recordings
+- **Custom TTS** — not a pre-trained generic voice
+- **Flexible input** — synthesize any text after training
+- **Jupyter-based** — easy to follow, step-by-step notebook
 
-1. YouTube: [Watch Video](https://www.youtube.com/watch?v=e71H--vxRvo&t=352s)
-2. GitHub Repo: [View Repository](https://github.com/justinjohn0306/FakeYou-Tacotron2-Notebook?tab=readme-ov-file)
+---
 
+## 🔗 Related Research
 
+This project uses architectures documented in:
+→ [R-D-about-TTS-Models-Architecture-Structure](https://github.com/Ramisa-16/R-D-about-TTS-Models-Architecture-Structure)
 
+---
+
+## 🚀 Getting Started
+
+```bash
+git clone https://github.com/Ramisa-16/Text-to-Speech-using-My-voice.git
+cd Text-to-Speech-using-My-voice
+pip install -r requirements.txt
+jupyter notebook
+```
+
+---
+
+## 🛠️ Tech Stack
+
+**Python** · **Jupyter Notebook** · **TTS Libraries** · **PyTorch** · **Librosa**
+
+---
+
+## 👩‍💻 Author
+
+**Ramisa Sharar Nidhi** — AI Developer @ Betopia Group
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-ramisashararnidhi-0077B5?style=flat&logo=linkedin)](https://linkedin.com/in/ramisashararnidhi)
+[![GitHub](https://img.shields.io/badge/GitHub-Ramisa--16-181717?style=flat&logo=github)](https://github.com/Ramisa-16)
